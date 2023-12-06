@@ -1,3 +1,4 @@
+"use client"
 import React, { createContext, useState } from "react";
 import type { links } from "@/lib/data";
 import { SectionName } from "@/lib/types";
