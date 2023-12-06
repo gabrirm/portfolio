@@ -4,7 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import clsx from "clsx";
+import { useActiveSection } from "@/context/active-section-context";
+
 export default function Header() {
+  const { activeSection, setActiveSection, setTimeOfLastScroll } =
+    useActiveSection();
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -27,7 +32,7 @@ export default function Header() {
             sm:h-[3.25rem]
             sm:w-[36rem]
             sm:rounded-full
-            transform
+          
           "
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
@@ -59,18 +64,28 @@ export default function Header() {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               className="
-                h-3/4 flex items-center justify-center
+                h-3/4 flex items-center justify-center relative
               "
             >
               <Link
-                className="
-                  flex w-full items-center justify-center
-                  px-3 py-3 hover:text-gray-950 trasition
-                  
-                "
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastScroll(Date.now());
+                }}
+                className={clsx(
+                  "flex w-full text-gray-600 items-center justify-center px-3 py-3 hover:text-gray-950 transition",
+                  { "text-gray-950": activeSection === link.name }
+                )}
                 href={link.hash}
               >
                 {link.name}
+                {activeSection === link.name && (
+                  <motion.span
+                    className="bg-gray-100 drop-shadow-lg rounded-full absolute inset-0 -z-10"
+                    layoutId="activeSection"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  ></motion.span>
+                )}
               </Link>
             </motion.li>
           ))}
