@@ -37,6 +37,8 @@ export default function Skills() {
             variants={fadeIAnimationVariants}
             initial="initial"
             whileInView="animate"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             viewport={{
               once: true,
             }}
@@ -45,6 +47,7 @@ export default function Skills() {
                 flex flex-col items-center
                 bg-white rounded-xl shadow-md
                 border border-black/[0.1] px-2 py-1.5
+                
           "
           >
             <div className="flex flex-col items-center">
