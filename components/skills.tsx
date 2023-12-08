@@ -47,7 +47,7 @@ export default function Skills() {
                 flex flex-col items-center
                 bg-white rounded-xl shadow-md
                 border border-black/[0.1] px-2 py-1.5
-                
+                dark:bg-white/10 dark:text-white/80
           "
           >
             <div className="flex flex-col items-center">

@@ -32,6 +32,9 @@ export default function Header() {
             sm:h-[3.25rem]
             sm:w-[36rem]
             sm:rounded-full
+            dark:bg-gray-950
+            dark:border-black/40
+            dark:bg-opacity-75
           
           "
         initial={{ y: -100, x: "-50%", opacity: 0 }}
@@ -73,15 +76,15 @@ export default function Header() {
                   setTimeOfLastScroll(Date.now());
                 }}
                 className={clsx(
-                  "flex w-full text-gray-600 items-center justify-center px-3 py-3 hover:text-gray-950 transition",
-                  { "text-gray-950": activeSection === link.name }
+                  "flex w-full text-gray-600 items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  { "text-gray-950 dark:text-gray-300": activeSection === link.name }
                 )}
                 href={link.hash}
               >
                 {link.name}
                 {activeSection === link.name && (
                   <motion.span
-                    className="bg-gray-100 drop-shadow-lg rounded-full absolute inset-0 -z-10"
+                    className="bg-gray-200 borderBlack drop-shadow-lg rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   ></motion.span>

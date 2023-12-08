@@ -21,6 +21,8 @@ export default function SubmitBtn({ children }: SubmitBtnProps) {
           hover:bg-gray-950
           disabled:opacity-80 disabled:cursor-not-allowed
           disabled:scale-100 disabled:hover:scale-100
+          dark:bg-white dark:bg-opacity-10
+          dark:hover:bg-opacity-20
           "
     >
       {pending ? (
