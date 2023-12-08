@@ -1,10 +1,15 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import { GrWorkshop } from "react-icons/gr";
+
+import forkifyApp from "@/public/forkifyApp.png";
+import natoursApp from "@/public/natoursApp.png";
+import NatoursCSS from "@/public/NatoursCSS.png";
+import nexterApp from "@/public/nexterApp.png";
+import trilloApp from "@/public/trilloApp.png";
+import wildOasis from "@/public/wildOasis.png";
+import spotifyClone from "@/public/spotifyClone.png";
 
 export const links = [
   {
@@ -35,52 +40,95 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Freelance Full-Stack Developer",
+    location: "Remote",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I've been working as a freelance developer for 2 years. I've worked with React, Next.js, TypeScript, Tailwind, Prisma, MongoDB, and more.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2021 - present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "IT Support | Cybersecurity Content Creator",
+    location: "Seville, Spain",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Internship for 6 months. I worked as an IT Support and Cybersecurity Content Creator. I created content for several company's courses",
+    icon: React.createElement(GrWorkshop),
+    date: "2023",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Spotify Clone",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A Spotify clone with features like authentication, search, playlists, and more.",
+    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Supabase"],
+    imageUrl: spotifyClone,
+    url: "https://spotify-clone-three-silk.vercel.app/",
   },
   {
-    title: "rmtDev",
+    title: "The Wild Oasis",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "All-in-one solution for managing cabin check-ins, check-outs, user management, bookings, and more.",
+    tags: [
+      "React",
+      "Supabase",
+      "Redux",
+      "R.Router",
+      "R.Hook Form",
+      "R.Query",
+      "Auth",
+      "Recharts",
+    ],
+    imageUrl: wildOasis,
+    url: "https://the-wild-oasis-kappa-sepia.vercel.app/",
   },
   {
-    title: "Word Analytics",
+    title: "Natours",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Fully functional app consisting on booking different tours, where users can log in, create reviews on tours, make payments, etc.",
+    tags: ["Node.js", "Express", "MongoDB", "Mongoose", "Pug templates"],
+    imageUrl: natoursApp,
+    url: "https://natours-057d.onrender.com/",
+  },
+  {
+    title: "Natours CSS",
+    description:
+      "Advanced CSS techniques for the frontend of the Natours project. Complex animations, CSS popups, responsive images, etc.",
+    tags: ["CSS Grid", "CSS Flexbox", "SASS", "Responsive Design"],
+    imageUrl: NatoursCSS,
+    url: "https://gabri-natours-app.netlify.app/",
+  },
+  {
+    title: "Trillo App",
+    description:
+      "Advanced CSS techniques for an app consisting hotel bookings. Built mainly using CSS Flexbox.",
+    tags: ["CSS Grid", "CSS Flexbox", "SASS", "Responsive Design"],
+    imageUrl: trilloApp,
+    url: "https://gabri-trillo-app.netlify.app/",
+  },
+  {
+    title: "Nexter App",
+    description:
+      "Advanced CSS techniques for an app consisting on luxury homes rental. Built mainly using CSS Grid.",
+    tags: ["CSS Grid", "CSS Flexbox", "SASS", "Responsive Design"],
+    imageUrl: nexterApp,
+    url: "https://gabri-nexter-app.netlify.app/",
+  },
+  {
+    title: "Forkify App",
+    description:
+      "Modern JavaScript app for searching and creating recipes. Built using the MVC architecture.",
+    tags: [
+      "MVC",
+      "OOP",
+      "Geolocation",
+      "Leaflet",
+      "Async/Await",
+      "Error Handling",
+    ],
+    imageUrl: forkifyApp,
+    url: "https://forkify-gabrielrm.netlify.app/",
   },
 ] as const;
 

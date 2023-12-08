@@ -56,7 +56,7 @@ export default function Contact() {
         <textarea
           placeholder="Your message"
           className="
-          h-52 my-3 rounded-lg borderBlack p-4 outline-none 
+          h-52 my-3 rounded-lg borderBlack p-4 outline-none mb-4 
           focus:outline-gray-300 dark:bg-white dark:bg-opacity-80
           dark:focus:bg-opacity-100 transition-all dark:placeholder:text-black/50
           "

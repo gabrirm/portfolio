@@ -17,28 +17,32 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Accounting</span>, I decided to pursue my
-        passion for programming. I enrolled in a coding bootcamp and learned{" "}
-        <span className="font-medium">full-stack web development</span>.{" "}
+        During my third year of pursuing a degree in{" "}
+        <span className="font-medium">Marketing and Market Research</span>, I
+        decided to pursue my passion for programming. I embarked on an
+        additional academic endeavor and started a Bachelor&apos;s program on{" "}
+        <span className="font-medium">Computer Engineering</span>.{" "}
         <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{" "}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+        problem-solving aspect. I love the feeling of finally figuring out a
+        solution to a problem.
+        <br /> After completing my Marketing degree, I started my master&apos;s
+        degree in <span className="font-medium">Data Science & Big Data</span>,
+        which is something I am also passionate about.
       </p>
 
       <p>
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">history and philosophy</span>. I&apos;m
-        also learning how to play the guitar.
+        Combining my background in{" "}
+        <span className="font-medium">
+          Marketing, Web Development, and Data Science,
+        </span>{" "}
+        I&apos;m eager to contribute my unique blend of skills to engaging and
+        challenging projects.
+      </p>
+      <p className="mt-5">
+        My core stack is{" "}
+        <span className="font-medium">
+          React, Next.js, TypeScript, Node.js and MongoDB.
+        </span>
       </p>
     </motion.section>
   );
