@@ -7,19 +7,20 @@ import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSection } from "@/context/active-section-context";
 import { useTheme } from "@/context/theme-context";
+import { IoIosMenu } from "react-icons/io";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastScroll } =
     useActiveSection();
   return (
-    <header className="z-[999] relative">
+    <header className="z-[999] relative mb-10">
       <motion.div
         className="
             fixed
+            w-full
             top-0
             left-1/2
-            h-[4.5rem]
-            w-full
+            h-[3.5rem]
             rounded-none
             border
           border-white
@@ -31,7 +32,7 @@ export default function Header() {
             backdrop-blur-[0.5rem]
             sm:top-6
             sm:h-[3.25rem]
-            sm:w-[36rem]
+            sm:w-[33rem]
             sm:rounded-full
             dark:bg-gray-950
             dark:border-black/40
@@ -41,6 +42,7 @@ export default function Header() {
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
+
       <nav
         className="
             flex
@@ -53,6 +55,7 @@ export default function Header() {
             sm:top-[1.7rem]
             sm:h-[initial]
             sm:py-0
+
         "
       >
         <ul
@@ -60,6 +63,7 @@ export default function Header() {
             flex
             items-center
             justify-center
+            
           "
         >
           {links.map((link) => (
@@ -77,7 +81,7 @@ export default function Header() {
                   setTimeOfLastScroll(Date.now());
                 }}
                 className={clsx(
-                  "flex w-full text-gray-600 items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-100",
+                  "flex w-full text-xs sm:text-sm text-gray-600 items-center justify-center px-2 sm:px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-100",
                   {
                     "text-gray-950 dark:!text-gray-100":
                       activeSection === link.name,
@@ -88,7 +92,7 @@ export default function Header() {
                 {link.name}
                 {activeSection === link.name && (
                   <motion.span
-                    className="bg-gray-200 borderBlack drop-shadow-lg rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                    className="bg-gray-200 block borderBlack drop-shadow-lg rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                     layoutId="activeSection"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   ></motion.span>
