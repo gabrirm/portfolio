@@ -1,5 +1,6 @@
 "use client";
 import { projectsData } from "@/lib/data";
+import { useSectionInView } from "@/lib/hooks";
 import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,6 +22,7 @@ export default function Project({
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const {ref: refSection} = useSectionInView("Projects")
   return (
     <motion.div
       className="mb-3 sm:mb-8 last:mb-0 group"
@@ -28,6 +30,7 @@ export default function Project({
       style={{ scale: scaleProgress, opacity: opacityProgress }}
     >
       <section
+        ref={refSection}
         className="
         bg-gray-100
         max-w-[42rem]
