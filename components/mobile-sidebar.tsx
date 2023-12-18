@@ -74,13 +74,14 @@ const MobileSidebar = () => {
             z-[999]
             top-0
             mb-20
-            bg-opacity-60
+            bg-opacity-30
             flex
             items-center
             justify-stretch
             shadow-lg
             shadow-black/[0.03]
             backdrop-blur-[0.5rem]
+            
         "
       >
         <Button
