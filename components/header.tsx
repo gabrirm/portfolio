@@ -8,14 +8,21 @@ import clsx from "clsx";
 import { useActiveSection } from "@/context/active-section-context";
 import { useTheme } from "@/context/theme-context";
 import { IoIosMenu } from "react-icons/io";
+import MobileSidebar from "./mobile-sidebar";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastScroll } =
     useActiveSection();
   return (
-    <header className="z-[999] relative mb-10">
-      <motion.div
-        className="
+    <>
+      <MobileSidebar />
+      <header
+        className="z-[999] relative mb-10 hidden
+            md:block"
+      >
+        <motion.div
+          className="
+            
             fixed
             w-full
             top-0
@@ -39,12 +46,12 @@ export default function Header() {
             dark:bg-opacity-75
           
           "
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-      ></motion.div>
+          initial={{ y: -100, x: "-50%", opacity: 0 }}
+          animate={{ y: 0, x: "-50%", opacity: 1 }}
+        ></motion.div>
 
-      <nav
-        className="
+        <nav
+          className="
             flex
             fixed
             top-[0.15rem]
@@ -57,51 +64,56 @@ export default function Header() {
             sm:py-0
 
         "
-      >
-        <ul
-          className="
+        >
+          <ul
+            className="
             flex
             items-center
             justify-center
             
           "
-        >
-          {links.map((link) => (
-            <motion.li
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              className="
+          >
+            {links.map((link) => (
+              <motion.li
+                key={link.hash}
+                initial={{ y: -100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                className="
                 h-3/4 flex items-center justify-center relative
               "
-            >
-              <Link
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastScroll(Date.now());
-                }}
-                className={clsx(
-                  "flex w-full text-xs sm:text-sm text-gray-600 items-center justify-center px-2 sm:px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-100",
-                  {
-                    "text-gray-950 dark:!text-gray-100":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
               >
-                {link.name}
-                {activeSection === link.name && (
-                  <motion.span
-                    className="bg-gray-200 block borderBlack drop-shadow-lg rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
-                    layoutId="activeSection"
-                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+                <Link
+                  onClick={() => {
+                    setActiveSection(link.name);
+                    setTimeOfLastScroll(Date.now());
+                  }}
+                  className={clsx(
+                    "flex w-full text-xs sm:text-sm text-gray-600 items-center justify-center px-2 sm:px-3 py-3 hover:text-gray-950 transition dark:text-gray-400 dark:hover:text-gray-100",
+                    {
+                      "text-gray-950 dark:!text-gray-100":
+                        activeSection === link.name,
+                    }
+                  )}
+                  href={link.hash}
+                >
+                  {link.name}
+                  {activeSection === link.name && (
+                    <motion.span
+                      className="bg-gray-200 block borderBlack drop-shadow-lg rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    ></motion.span>
+                  )}
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+        </nav>
+      </header>
+    </>
   );
 }
