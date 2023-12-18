@@ -74,7 +74,7 @@ const MobileSidebar = () => {
             z-[999]
             top-0
             mb-20
-            bg-opacity-30
+            bg-opacity-70
             flex
             items-center
             justify-stretch
