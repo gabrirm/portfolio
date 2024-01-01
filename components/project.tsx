@@ -62,7 +62,7 @@ export default function Project({
           <Link
             className="
             text-xs mt-3 flex items-center gap-1 rounded-full mb-3 w-[max-content]
-            font-semibold underline
+            font-semibold underline hover:no-underline
             "
             href={url}
             target="_blank"
