@@ -22,7 +22,7 @@ export default function Project({
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  const {ref: refSection} = useSectionInView("Projects")
+  const { ref: refSection } = useSectionInView("Projects");
   return (
     <motion.div
       className="mb-3 sm:mb-8 last:mb-0 group"
@@ -62,7 +62,7 @@ export default function Project({
           <Link
             className="
             text-xs mt-3 flex items-center gap-1 rounded-full mb-3 w-[max-content]
-            font-semibold underline hover:no-underline
+            font-semibold underline hover:no-underline transition ease-in-out
             "
             href={url}
             target="_blank"
