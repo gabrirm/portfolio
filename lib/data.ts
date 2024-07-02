@@ -40,22 +40,39 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Freelance Full-Stack Developer",
-    location: "Remote",
+    title: "DevOps Engineer",
+    location: "Deutsche Telekom",
     description:
-      "I've been working as a freelance developer for 2 years. I've worked with React, Next.js, TypeScript, Tailwind, Prisma, MongoDB, and more.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2021 - present",
+      "Currently working as a DevOps Engineer at Deutsche Telekom, focusing on Azure and GitLab CI/CD pipelines for LLM's chatbots.",
+    icon: React.createElement(GrWorkshop),
+    date: "Jul 2024 - present",
   },
   {
-    title: "IT Support | Cybersecurity Content Creator",
+    title: "DevOps Engineer",
+    location: "Future Space S.A",
+    description:
+      "Worked as a SysAdmin with Linux, Acronis, Azure services, Nginx, Jenkins, and Ansible.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2024 - Jun 2024",
+  },
+  {
+    title: "SysAdmin | Cybersecurity Content Creator",
     location: "Seville, Spain",
     description:
-      "Internship for 6 months. I worked as an IT Support and Cybersecurity Content Creator. I created content for several company's courses",
+      "Internship for 6 months. I worked as a SysAdmin and Cybersecurity Content Creator. I created content for several company's courses.",
     icon: React.createElement(GrWorkshop),
     date: "2023",
   },
+  {
+    title: "Freelance Full-Stack Developer",
+    location: "Remote",
+    description:
+      "I've been working as a freelance developer for 3 years. I've worked with React, Next.js, TypeScript, Tailwind, Prisma, MongoDB, and more.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2021 - present",
+  },
 ] as const;
+
 
 export const projectsData = [
   {
