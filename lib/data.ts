@@ -57,7 +57,7 @@ export const experiencesData = [
   },
   {
     title: "SysAdmin | Cybersecurity Content Creator",
-    location: "Seville, Spain",
+    location: "Dolbuck Cybersecurity",
     description:
       "Internship for 6 months. I worked as a SysAdmin and Cybersecurity Content Creator. I created content for several company's courses.",
     icon: React.createElement(GrWorkshop),
